@@ -15,9 +15,5 @@ script:
     # Run pep8 on all .py files in all subfolders
     # We must ignore E402 module level import not at top of file
     # because of use case sys.path.append('..'); import <module>
-    - num_errors_before_autoflake =`find . -name \*.py -exec autoflake 
-    - echo $num_errors_before_autoflake 
-    - num_errors_before_flake=`find . -name \*.py -exec flake8
-    - echo $num_errors_before_flake
-    - num_errors_before__autopep8 =`find . -name \*.py -exec autopep8
-    - echo $num_errors_before__autopep8
+    - num_errors_before=`find . -name \*.py -exec pep8 --statistics
+    - echo $num_errors_before
