@@ -8,8 +8,7 @@ before_install:
     - pip install --upgrade pip
     - pip install pep8
     - pip install autopep8
-    - pip install autoflake
-    - pip install flake8
+
 
 script:
     # Run pep8 on all .py files in all subfolders
