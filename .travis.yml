@@ -6,7 +6,7 @@ before_install:
     - sudo apt-get -y install python-pip
     - sudo pip install --upgrade pip
     - pip install --upgrade pip
-    - pip install pep8
+    - pip install pycodestyle
     - pip install autopep8
 
 
@@ -14,5 +14,5 @@ script:
     # Run pep8 on all .py files in all subfolders
     # We must ignore E402 module level import not at top of file
     # because of use case sys.path.append('..'); import <module>
-    - num_errors_before=`find . -name \*.py -exec pep8 --ignore=E402 {} + `
+    - num_errors_before=`find . -name \*.py -exec pycodestyle --ignore=E402 {} + `
     - echo $num_errors_before
