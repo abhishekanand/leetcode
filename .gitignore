@@ -99,3 +99,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+CNTK-Samples-2-5-1/
